@@ -1,4 +1,5 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChange, SimpleChanges } from '@angular/core';
+import { IUser } from '../Interfaces/user.interface';
 
 @Component({
   selector: 'app-navbar',
@@ -7,12 +8,12 @@ import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 })
 export class NavbarComponent implements OnChanges {
 
-  // input property used for parent-child interaction
-  @Input() notificationNumber: number = 0;
-  @Input() notificationList = 0;
-
+  @Input() registeredUser?: IUser;
+  @Output() undoRedo: EventEmitter<any> = new EventEmitter();
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log('This is from navbar => ', changes);
+    this.undoRedo.emit(changes['registeredUser']);
   }
+
+
 }

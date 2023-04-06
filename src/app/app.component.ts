@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IUser } from './Interfaces/user.interface';
 
 @Component({
   selector: 'app-root',
@@ -7,19 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  notifications = 0;
-  allNotifications = 0;
+  user?: IUser;
+  userState: any;
 
-  constructor() {
-    setInterval(() => {
-      this.notifications += 5;
-      this.allNotifications += 2;
-    }, 1000)
+  consumerForRegisterSuccess(data: IUser) {
+    this.user = data;
   }
 
-  title = 'tasky';
-  description = 'This is our great and amazing Angular project';
-
-  // Data binding
-  // => 1-way data binding
+  consumerForUndoRedo(data: any) {
+    this.userState = data;
+  }
 }

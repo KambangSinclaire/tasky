@@ -1,5 +1,5 @@
 footer.footer-container {
-    height: 8rem;
+    height: 4rem;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -10,6 +10,6 @@ footer.footer-container {
     line-height: 3rem;
     font-weight: 600;
     margin-top: 2rem;
-    position: fixed;
+    position: absolute;
     bottom: 0;
 }
