@@ -1,0 +1,64 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 2rem;
+
+    .profile-image-container {
+        img {
+            width: 70%;
+            animation: flyIn 2s infinite alternate;
+        }
+    }
+
+    .about-text-container {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .about-text {
+        font-size: 4rem;
+        line-height: 3.5rem;
+        text-align: center;
+        // color: #456511;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 700;
+    }
+
+    .toggle-style {
+        border: none;
+        font-size: 2rem;
+        text-align: center;
+        padding: 1rem 1.6rem;
+        cursor: pointer;
+        color: white;
+        background-image: linear-gradient(to bottom right, rgba(177, 10, 10, 0.722), black);
+        transition: background-color .5s ease-in-out;
+    }
+
+    .toggle-style:hover {
+        background-color: transparent;
+        color: white;
+    }
+}
+
+@keyframes flyIn {
+    0% {
+        transform: translate(-200, 0);
+    }
+
+    50% {
+        transform: translate(-50, -50);
+    }
+
+    100% {
+        transform: translate(0, 0);
+        scale: 1.2;
+    }
+}

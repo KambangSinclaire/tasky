@@ -1,0 +1,13 @@
+<header>
+    <div class="about-text-container">
+        <p (mousemove)="toggleColor($event)" class="about-text" [ngStyle]="{'background-image': gradient}">
+            Software Engineer, Architect, Instructor,
+            Mentor, Husband and Soon to be father
+        </p>
+
+        <button class="toggle-style">Toggle</button>
+    </div>
+    <div class="profile-image-container">
+        <img src="../../assets/images/profile.png" alt="Profile">
+    </div>
+</header>

@@ -1,0 +1,43 @@
+.auth-container {
+    background-color: teal;
+    color: white;
+    width: 30%;
+    margin: 0 auto;
+    transform: translateY(-400px);
+    border-radius: 1rem;
+
+    form.form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        padding: 3rem 0rem;
+
+        input.form-controls {
+            width: 60%;
+            border: none;
+            text-align: center;
+            outline: none;
+            border-radius: 1rem;
+            padding: 1rem;
+            background-color: rgba(255, 166, 0, 0.689);
+            color: white;
+            font-weight: 700;
+        }
+
+        .submit-btn {
+            border: none;
+            outline: none;
+            background-image: linear-gradient(to top right, rgb(94, 6, 6), rgba(9, 9, 74, 0.92));
+            padding: 1rem 2rem;
+            color: white;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: transparent;
+            color: orange;
+        }
+    }
+}
