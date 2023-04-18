@@ -1,5 +1,4 @@
 footer.footer-container {
-    height: 4rem;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -7,9 +6,9 @@ footer.footer-container {
     background-color: black;
     color: white;
     font-size: 1.4rem;
-    line-height: 3rem;
+    line-height: 1rem;
     font-weight: 600;
-    margin-top: 2rem;
-    position: absolute;
+    margin-top: 1rem;
+    position: fixed;
     bottom: 0;
 }

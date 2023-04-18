@@ -1,0 +1,21 @@
+<section class="tasks">
+    <div class="task-item" *ngFor="let task of tasks">
+        <h1>{{ task?.name }}</h1>
+        <p>{{ task?.description }}</p>
+
+        <p>Task Status :
+            <span [style]="task.status.startsWith('SUCCESS') ? 'background-color: green' : 'background-color: yellow'">
+                {{ task.status}}
+            </span>
+        </p>
+
+        <p>Task Status :
+            <span
+                [style]="task.level.startsWith('HIGH') ? (task.level.startsWith('MEDIUM') ? 'background-color: cyan':'background-color: green') : 'background-color: yellow'">
+                {{ task.level }}
+            </span>
+        </p>
+        <img [src]="task?.image" />
+    </div>
+</section>
+<router-outlet></router-outlet>

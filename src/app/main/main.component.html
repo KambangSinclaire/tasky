@@ -1,17 +1,7 @@
 <section class="auth-container">
-
-    <button [disabled]="!canUndo" (click)="undo()" class="undo-btn submit-btn" style="margin: 1rem;">Undo</button>
-    <button [disabled]="!canRedo" (click)="redo()" class="redo-btn submit-btn">Redo</button>
-
-    <form class="form">
-        <input type="text" name="username" [(ngModel)]="username" class="form-controls" placeholder="Username">
-        <span>{{ username }}</span>
-        <input type="email" name="email" [(ngModel)]="email" class="form-controls" placeholder="Email">
-        <span>{{ email }}</span>
-        <input type="password" name="password" [(ngModel)]="password" class="form-controls" placeholder="Password">
-        <span>{{ password }}</span>
-        <button type="button" class="submit-btn" (click)="register($event)">
-            Register
-        </button>
-    </form>
+    <div class="action-btns">
+        <a routerLink="/add-task" class="add-task-btn">Add Task</a>
+        <a routerLink="/tasks/my-tasks" class="my-tasks-btn">My tasks</a>
+    </div>
+    <router-outlet></router-outlet>
 </section>

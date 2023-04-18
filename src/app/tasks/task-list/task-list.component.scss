@@ -1,0 +1,13 @@
+section.tasks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+
+    div.task-item {
+        margin: 1rem;
+        border-radius: 10px;
+        background-image: linear-gradient(to bottom right, rgba(100, 20, 40, 0.7), rgba(100, 20, 40, 0.7));
+        width: 15%;
+    }
+}

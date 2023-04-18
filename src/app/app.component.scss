@@ -1,4 +1,4 @@
-section.head-section {
+section.app-content {
     height: 80vh;
     background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('../assets/images/bg-image.jpg');
     background-position: center;
@@ -7,10 +7,9 @@ section.head-section {
     background-repeat: no-repeat;
 }
 
-section.main {
-    height: 80vh;
-}
+
 
 section.footer {
     position: relative;
+    max-height: 20vh;
 }

@@ -1,14 +1,15 @@
-<section class="head-section">
-    <!-- Navbar -->
-    <app-navbar (undoRedo)="consumerForUndoRedo($event)" [registeredUser]="user"></app-navbar>
-    <!-- <app-header></app-header> -->
-</section>
+<section class="app-content">
+    <section class="head-section">
+        <!-- <app-navbar (undoRedo)="consumerForUndoRedo($event)" [registeredUser]="user"></app-navbar> -->
+        <app-navbar></app-navbar>
+    </section>
 
-<section class="main">
-    <!-- Form -->
-    <app-main [stateValue]="userState" (registerSuccess)="consumerForRegisterSuccess($event)"></app-main>
-</section>
+    <section class="main">
+        <!-- <app-main [stateValue]="userState" (registerSuccess)="consumerForRegisterSuccess($event)"></app-main> -->
+        <router-outlet></router-outlet>
+    </section>
 
-<section class="footer">
-    <app-footer></app-footer>
+    <section class="footer">
+        <app-footer></app-footer>
+    </section>
 </section>

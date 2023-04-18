@@ -10,6 +10,12 @@ import { MainComponent } from './main/main.component';
 import { UsersService } from './services/users/users.service';
 import { LocalStoreService } from './services/store/local-store.service';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { AddTaskComponent } from './tasks/add-task/add-task.component';
+import { TaskListComponent } from './tasks/task-list/task-list.component';
+import { EditTaskComponent } from './tasks/edit-task/edit-task.component';
+import { TaskDetailsComponent } from './tasks/task-details/task-details.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +23,13 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     FooterComponent,
     HeaderComponent,
-    MainComponent
+    MainComponent,
+    LoginComponent,
+    RegisterComponent,
+    AddTaskComponent,
+    TaskListComponent,
+    EditTaskComponent,
+    TaskDetailsComponent
   ],
   imports: [
     BrowserModule,

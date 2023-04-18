@@ -1,0 +1,33 @@
+<style>
+    .add-task-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgba(0, 128, 128, 0.529);
+        /* width: 50%; */
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+        margin: 1rem;
+    }
+</style>
+
+<section class="add-task-section">
+    <input type="text" [(ngModel)]="task.name" name="name" class="form-control" placeholder="Task name">
+    <textarea type="text" [(ngModel)]="task.description" name="description" placeholder="Task description"
+        class="form-control" rows="5" cols="50">
+    </textarea>
+    <input type="date" [(ngModel)]="task.dueDate" name="dueDate" class="form-control" placeholder="Task due date">
+    <input type="date" name="startDate" [(ngModel)]="task.startDate" class="form-control" placeholder="Task start date">
+    <select name="difficulty" id="difficulty" [(ngModel)]="task.difficulty">
+        <option value="high">high</option>
+        <option value="medium">medium</option>
+        <option value="standard" selected>standard</option>
+    </select>
+    <img src="" alt="task img" class="form-control">
+    <button (click)="saveTask()">Save task</button>
+</section>
