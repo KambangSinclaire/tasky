@@ -7,6 +7,9 @@ import { RegisterComponent } from './auth/register/register.component';
 import { TaskListComponent } from './tasks/task-list/task-list.component';
 import { AddTaskComponent } from './tasks/add-task/add-task.component';
 import { EditTaskComponent } from './tasks/edit-task/edit-task.component';
+import { TaskDetailsComponent } from './tasks/task-details/task-details.component';
+import { AuthGuard } from './Guards/auth.guard';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 // Define all the routes of your application
 const routes: Routes = [
@@ -40,6 +43,16 @@ const routes: Routes = [
   {
     path: "add-task",
     component: AddTaskComponent
+  },
+  {
+    path: "task-details/:id", // this -> (:id) is to specify that this route expects a ROUTE PARAMS
+    component: TaskDetailsComponent,
+    canActivate: [AuthGuard]
+  },
+  // always set the wildcard route at the end of your route config
+  {
+    path: "**",
+    component: NotfoundComponent
   }
 ];
 

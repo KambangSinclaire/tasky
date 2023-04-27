@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ITask } from 'src/app/Interfaces/task.interface';
 import { TaskDifficulty, TaskLevel, TaskStatus } from 'src/app/constants/constants.enum';
 import { TasksService } from 'src/app/services/tasks.service';
@@ -19,7 +20,8 @@ export class TaskListComponent implements OnInit {
     startDate: new Date(Date.now()),
     dueDate: "12/04/2023",
     level: TaskLevel.PROGRESS,
-    difficulty: TaskDifficulty.MEDIUM
+    difficulty: TaskDifficulty.MEDIUM,
+    id: 1
   },
   {
     name: 'Teach Angular',
@@ -29,14 +31,33 @@ export class TaskListComponent implements OnInit {
     startDate: new Date(Date.now() + 100),
     dueDate: "13/04/2023",
     level: TaskLevel.PROGRESS,
-    difficulty: TaskDifficulty.HIGH
+    difficulty: TaskDifficulty.HIGH,
+    id: 2
   }]
 
-  constructor(private taskService: TasksService) { }
+  constructor(
+    private taskService: TasksService,
+    private myRouter: Router
+  ) { }
 
   ngOnInit(): void {
     let allTasks = this.taskService.getTasks();
     this.tasks = [...this.tasks, ...allTasks.data];
+  }
+
+  gotoTaskDetails(taskId: number) {
+
+    // This navigates to the route specified below appending taskId as the route params
+    // This navigate function also takes an option object that lets you define the query params to be 
+    // sent with the route specified.
+    this.myRouter.navigate([`/task-details/${taskId}`],
+      // {
+      //   queryParams: {
+      //     name: "kambang",
+      //     age: 34
+      //   }
+      // }
+    )
   }
 
 }

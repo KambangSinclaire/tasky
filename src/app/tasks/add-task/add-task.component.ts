@@ -21,7 +21,8 @@ export class AddTaskComponent {
     level: TaskLevel.NOT_STARTED,
     difficulty: TaskDifficulty.STANDARD,
     status: TaskStatus.PROCESSING,
-    userId: ''
+    userId: '',
+    id: 0
   }
 
   saveTask() {
@@ -29,6 +30,7 @@ export class AddTaskComponent {
     if (this.task.name.length < 5 || this.task.description.length < 20) {
       alert('Name or description has an invalid length')
     }
+    this.task.id = Date.now();
     this.taskService.addTask(this.task);
   }
 
